@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.p-button {
+  border-radius: 0;
+}
+
+app-root {
+  height: 100%;
+  display: block;
+}
+
+.p-button-text {
+  background-color: transparent;
+  border: 0;
+}
+
+.p-button.p-button-on {
+  //background-color: #77B621;
+  //color: black;
+  color: yellow;
+}
+
+.p-button {
+  background-color: #3F3F3F;
+  color: whitesmoke;
+
+  border: 0;
+}
+
+button.router-link {
+  color: white;
+}
+
+button.router-link.link-active {
+  color: #77B621;
+}

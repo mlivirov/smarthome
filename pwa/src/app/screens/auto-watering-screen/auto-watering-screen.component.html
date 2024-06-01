@@ -1,0 +1,11 @@
+<div class="grid">
+  <app-clock></app-clock>
+  <app-water-tank-capacity></app-water-tank-capacity>
+
+  <div class="ml-auto"></div>
+
+  <app-duration-editor [ngModel]="duration$ | async" (ngModelChange)="updateDuration($event)"></app-duration-editor>
+  <app-switch-button class="my-auto" icon="fa-solid fa-faucet-drip" [key]="SwitchesEnum.AutoWatering"></app-switch-button>
+</div>
+
+<app-simple-schedule [ngModel]="schedule$ | async" (ngModelChange)="updateSchedule($event)"></app-simple-schedule>

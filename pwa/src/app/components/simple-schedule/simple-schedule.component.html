@@ -1,0 +1,52 @@
+<div class="flex justify-content-center">
+  <div class="bg-black-alpha-30 text-white">
+    <div class="flex justify-content-center">
+      <div class="text-center">
+        <h3 class="mb-4 text-3xl" (click)="toggleTimer1()">Таймер 1 {{model.isTimer1Active ? '' : '(Выкл)'}}</h3>
+        <app-time-editor [disabled]="!model.isTimer1Active" [ngModel]="model.timer1" (ngModelChange)="handleTimer1Change($event)"></app-time-editor>
+      </div>
+      <div class="mx-6"></div>
+      <div class="text-center">
+        <h3 class="mb-4 text-3xl" (click)="toggleTimer2()">Таймер 2 {{model.isTimer2Active ? '' : '(Выкл)'}}</h3>
+        <app-time-editor [disabled]="!model.isTimer2Active" [ngModel]="model.timer2" (ngModelChange)="handleTimer2Change($event)"></app-time-editor>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <button class="m-2 w-6rem h-2rem cursor-pointer"
+              (click)="toggleDayOfWeek(1)">
+        <i *ngIf="model.daysOfWeek.has(1)" class="pi pi-check"></i>
+        <span>Пн</span>
+      </button>
+      <button class="m-2 w-6rem h-2rem cursor-pointer"
+              (click)="toggleDayOfWeek(2)">
+        <i *ngIf="model.daysOfWeek.has(2)" class="pi pi-check"></i>
+        <span>Вт</span>
+      </button>
+      <button class="m-2 w-6rem h-2rem cursor-pointer"
+              (click)="toggleDayOfWeek(3)">
+        <i *ngIf="model.daysOfWeek.has(3)" class="pi pi-check"></i>
+        <span>Ср</span>
+      </button>
+      <button class="m-2 w-6rem h-2rem cursor-pointer"
+              (click)="toggleDayOfWeek(4)">
+        <i *ngIf="model.daysOfWeek.has(4)" class="pi pi-check"></i>
+        <span>Чт</span>
+      </button>
+      <button class="m-2 w-6rem h-2rem cursor-pointer"
+              (click)="toggleDayOfWeek(5)">
+        <i *ngIf="model.daysOfWeek.has(5)" class="pi pi-check"></i>
+        <span>Пт</span>
+      </button>
+      <button class="m-2 w-6rem h-2rem cursor-pointer"
+              (click)="toggleDayOfWeek(6)">
+        <i *ngIf="model.daysOfWeek.has(6)" class="pi pi-check"></i>
+        <span>Сб</span>
+      </button>
+      <button class="m-2 w-6rem h-2rem cursor-pointer"
+              (click)="toggleDayOfWeek(0)">
+        <i *ngIf="model.daysOfWeek.has(0)" class="pi pi-check"></i>
+        <span>Вс</span>
+      </button>
+    </div>
+  </div>
+</div>

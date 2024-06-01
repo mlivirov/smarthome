@@ -1,0 +1,13 @@
+<button class="m-2 p-button relative cursor-pointer" [class.w-20rem]="label"
+        [class.p-button-off]="!(checkIsSwitchOn()|async)"
+        [class.p-button-on]="(checkIsSwitchOn()|async)"
+        (click)="touchSwitch()"
+        [disabled]="checkIsSwitchRequested() | async">
+  <div class="flex align-items-center justify-content-center p-4">
+    <i *ngIf="icon" [ngClass]="icon + ' ' + (onIcon && (checkIsSwitchOn()|async) ? onIcon : '')"
+       class="fa-8x"
+       [class.fa-beat]="checkIsSwitchRequested() | async"
+       [class.mr-4]="label"></i>
+    <span *ngIf="label" class="text-2xl">{{label}}</span>
+  </div>
+</button>

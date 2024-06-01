@@ -1,0 +1,4 @@
+<div class="bg-black-alpha-50 m-2 p-2 flex align-items-center h-10rem text-white">
+  <h5 class="my-0 text-3xl mr-4">Продолжительность</h5>
+  <app-time-editor textStyleClass="text-5xl" [ngModel]="model" (ngModelChange)="handleChanged($event)" [disabled]="isDisabled"></app-time-editor>
+</div>

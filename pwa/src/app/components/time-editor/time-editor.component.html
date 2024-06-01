@@ -1,0 +1,29 @@
+<div class="flex">
+  <div class="flex flex-column justify-content-center align-items-center relative">
+    <button type="button" class="p-button-text text-white cursor-pointer" (click)="incHours()" [disabled]="isDisabled">
+      <i class="pi pi-angle-up"></i>
+    </button>
+    <span [ngClass]="textStyleClass" [class.text-gray-50]="isDisabled">{{model.hours | number: '2.0-2'}}</span>
+    <button type="button" class="p-button-text text-white cursor-pointer" (click)="decHours()" [disabled]="isDisabled">
+      <i class="pi pi-angle-down"></i>
+    </button>
+    <div class="absolute w-full h-full z-0 flex flex-column">
+      <div class="h-full w-full" (click)="incHours()"></div>
+      <div class="h-full w-full" (click)="decHours()"></div>
+    </div>
+  </div>
+  <span class="{{textStyleClass}} mt-3">:</span>
+  <div class="flex flex-column justify-content-center align-items-center relative">
+    <button type="button" class="p-button-text text-white cursor-pointer" (click)="incMinutes()" [disabled]="isDisabled">
+      <i class="pi pi-angle-up"></i>
+    </button>
+    <span [ngClass]="textStyleClass" [class.text-gray-50]="isDisabled">{{model.minutes | number: '2.0-2'}}</span>
+    <button type="button" class="p-button-text text-white cursor-pointer" (click)="decMinutes()" [disabled]="isDisabled">
+      <i class="pi pi-angle-down"></i>
+    </button>
+    <div class="absolute w-full h-full z-0 flex flex-column">
+      <div class="h-full w-full" (click)="incMinutes()"></div>
+      <div class="h-full w-full" (click)="decMinutes()"></div>
+    </div>
+  </div>
+</div>

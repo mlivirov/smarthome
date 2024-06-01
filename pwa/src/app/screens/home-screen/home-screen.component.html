@@ -1,0 +1,21 @@
+<div class="flex flex-wrap">
+  <app-clock></app-clock>
+  <app-air-sensor></app-air-sensor>
+  <div class="ml-auto"></div>
+
+  <app-switch-button label="Спальня" icon="fa-regular fa-lightbulb" [key]="SwitchesEnum.Bedroom"></app-switch-button>
+  <app-switch-button label="Кухня" icon="fa-regular fa-lightbulb" [key]="SwitchesEnum.Kitchen"></app-switch-button>
+
+  <div class="w-12"></div>
+
+  <div class="ml-auto">
+    <app-switch-button label="Сан. узел" icon="fa-regular fa-lightbulb" [key]="SwitchesEnum.Restroom"></app-switch-button>
+    <app-switch-button icon="fa-solid fa-fan" onIcon="fa-spin" [key]="SwitchesEnum.RestroomFan"></app-switch-button>
+  </div>
+
+  <div class="w-12"></div>
+  <app-switch-button label="Гостиная" icon="fa-regular fa-lightbulb" [key]="SwitchesEnum.LivingRoom"></app-switch-button>
+
+  <div class="ml-auto"></div>
+  <app-switch-button label="Фасад" icon="fa-regular fa-lightbulb" [key]="SwitchesEnum.Facade"></app-switch-button>
+</div>

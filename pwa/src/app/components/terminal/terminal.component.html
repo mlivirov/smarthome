@@ -1,0 +1,10 @@
+<div class="bg-black-alpha-30 m-2 p-2 text-white">
+  <h2 class="mb-0">Terminal</h2>
+  <hr class="mb-2">
+  <div class="h-15rem overflow-y-auto">
+    <p *ngFor="let entry of log" class="my-0">
+      <span class="mr-2">[{{entry.time | date: 'short'}}]</span>
+      <span>{{entry.message}}</span>
+    </p>
+  </div>
+</div>
