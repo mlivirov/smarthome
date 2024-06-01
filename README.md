@@ -16,3 +16,13 @@ This project is a smart home controller application designed to run on reclaimed
 - **State Management**: Efficient and predictable state management using NgRx.
 - **Cross-Platform**: Built with Cordova, the app runs smoothly on Android tablets.
 - **Home Automation**: Control various smart home devices through an Arduino microcontroller.
+
+## Run locally
+
+Please have NVM cli installed.
+
+- nvm use 12
+- npm run serve
+
+## Sidenote
+Node 12 and Angular 10 are years outdated, just like the reclaimed tablet used for this project. However, the high-level Angular API hasn't changed much, which is (in my humble opinion) a good sign of the framework's maturity.
